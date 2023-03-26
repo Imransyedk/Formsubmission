@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   
+      <form>
+          <h4>Form Submission</h4>
+          <!-- Input from User -->
+          <input type="text" placeholder='first name' id="fname"><br>
+          <input type=" lastname" placeholder='Lastname' id="lname"><br>
+          <input type="addressone" placeholder='Address line 1' id="addressone"><br>
+          <input type="addresstwo" placeholder='Address line 2' id="addresstwo"><br>
+          <input type="pin" placeholder='Pin' id="pin"><br>
+          <input type="gender" placeholder='Gender' id="gender"><br>
+          <input type="choicefood" placeholder='Choice Of Food' id="choicefood"><br>
+          <input type="state" placeholder='State' id="state"><br>
+          <input type="country" placeholder='Country' id="country"><br>
+
+<input id='btn' type="submit" placeholder='Register' onclick="register(event)">
+      </form>
+    
+      <h3>Temporary Database</h3>
+      <p>First Name: <span id="display_fname"></span></p>
+      <p>Second Name:<span id="display_lname"></span></p>
+      <p>Addressone:<span id="display_addressone"></span></p>
+      <p>Addresstwo: <span id="display_addresstwo"></span></p>
+      <p>Pin: <span id="display_pin"></span></p>
+      <p>Gender: <span id="display_gender"></span></p>
+      <p>Choice Of Food: <span id="display_choicefood"></span></p>
+      <p>State: <span id="display_state"></span></p>
+      <p>Country: <span id="display_country"></span></p>
+
+
+
+
+
+  <script>
+   const register = function (event) {
+   // Receive user input
+   let r_fname = document.querySelector("#fname").value;
+   let r_lname = document.querySelector("#lname").value;
+   let r_addressone = document.querySelector("#addressone").value;
+   let r_addresstwo= document.querySelector("#addresstwo").value;
+   let r_pin= document.querySelector("#pin").value;
+   let r_gender= document.querySelector("#gender").value;
+   let r_choicefood= document.querySelector("#choicefood").value;
+   let r_state= document.querySelector("#state").value;
+   let r_country= document.querySelector("#country").value;
+   
+   
+   // Output on page
+   display_fname.innerHTML = r_fname;
+   display_lname.innerHTML = r_lname;
+   display_addressone.innerHTML = r_addressone;
+   display_addresstwo.innerHTML = r_addresstwo;
+   display_pin.innerHTML = r_pin;
+   display_gender.innerHTML = r_gender;
+   display_choicefood.innerHTML = r_choicefood;
+   display_state.innerHTML = r_state;
+   display_country.innerHTML = r_country;
+
+
+   event.preventDefault();
+   };
+   </script>
+  
+
+</body>
+</html>
